@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    /* Introduction text */
+    .intro {
+      font-size: 1.3em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Link to resume */
+    .resume-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    /* Carousel container */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .experience {
+      min-width: 100%;
+      padding: 60px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
+      height: 400px;
+      position: relative;
+    }
+
+    /* Alternating colors and shapes */
+    .experience:nth-child(odd) {
+      background-color: #e0f7fa;
+      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
+    }
+
+    .experience:nth-child(even) {
+      background-color: #ffebee;
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    }
+
+    /* Experience content */
+    .experience h2 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .experience p {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    /* Image positioning */
+    .experience img {
+      max-width: 120px;
+      height: auto;
+      border-radius: 10px;
+      position: relative;
+      margin-left: auto;
+      margin-right: 0;
+      top: 0;
+    }
+
+    /* Buttons */
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Professional Experiences</h1>
+
+    <!-- Introduction -->
+    <p class="intro">Below, you’ll find an overview of my professional experiences and additional information about my background, including roles I've taken in finance, leadership, and entrepreneurial ventures. Each experience highlights key aspects of my growth and contributions, as well as links to further explore the companies and organizations I’ve worked with.</p>
+
+    <!-- Link to download resume -->
+<a href="Experiences/resume.pdf" class="resume-link" download="Niko_Orecchio_Resume.pdf">Download My Resume</a>
+
+    <!-- Carousel for experiences -->
+    <div class="carousel-container">
+      <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+      <div class="carousel-track">
+
+        <!-- Kitces.com Experience -->
+        <div class="experience">
+          <div>
+            <h2>Kitces.com - Research & Data Analysis Intern</h2>
+            <p>Spring 2024 - Present</p>
+            <p>At Kitces.com, I contribute 20 hours a week conducting in-depth industry research 
+               and analyzing customer data to assess the performance of their product offerings. 
+               My work helps inform decisions on product improvements and market positioning 
+               for one of the leading authorities in the financial advisory space.</p>
+            <!-- Link to company website -->
+            <a href="https://www.kitces.com/" target="_blank">Visit Kitces.com</a>
+          </div>
+          <img src="kitceslogo.png" alt="Kitces.com Logo">
+        </div>
+
+        <!-- Culper Capital Partners Experience -->
+        <div class="experience">
+          <div>
+            <h2>Culper Capital Partners - PE Summer Analyst</h2>
+            <p>May 2023 - August 2023</p>
+            <p>During my summer internship at Culper Capital Partners, I was involved in the analysis 
+               and financial modeling of Confidential Information Memorandums (CIMs) for investment 
+               opportunities in the medical device and aerospace sectors. I also worked closely 
+               with the CEO of a platform company to explore the implementation of artificial intelligence 
+               into their manufacturing processes.</p>
+            <!-- Link to company website -->
+            <a href="https://culpercapital.com/" target="_blank">Visit Culper Capital</a>
+          </div>
+          <img src="culperlogo.png" alt="Culper Capital Partners Logo">
+        </div>
+
+        <!-- Modera Wealth Management Experience -->
+        <div class="experience">
+          <div>
+            <h2>Modera Wealth Management - Financial Analyst Intern</h2>
+            <p>May 2022 - January 2023</p>
+            <p>At Modera Wealth Management, I worked closely with advisors and Client Service 
+               Associates (CSAs) to manage and analyze client data. I co-developed the "Financial 
+               Planning Assumptions" report, integrating economic and demographic factors to 
+               help advisors create personalized financial plans for clients.</p>
+            <!-- Link to company website -->
+            <a href="https://moderawealth.com/" target="_blank">Visit Modera Wealth Management</a>
+          </div>
+          <img src="moderalogo.png" alt="Modera Wealth Management Logo">
+        </div>
+
+        <!-- JerseyGems Trading Cards Experience -->
+        <div class="experience">
+          <div>
+            <h2>JerseyGems Trading Cards - Founder</h2>
+            <p>September 2022 - Present</p>
+            <p>I founded and currently operate JerseyGems Trading Cards, an online reselling business 
+               focused on trading cards and collectibles. Through platforms like eBay and Instagram, 
+               I generated over $10,000 in revenue within the first six months while maintaining a 
+               100% positive feedback rating and earning eBay’s “Top Rated Seller” status.</p>
+            <!-- Link to company website -->
+            <a href="https://www.ebay.com/usr/jerseygemstc" target="_blank">Visit JerseyGems on eBay</a>
+          </div>
+          <img src="jerseygemstc.png" alt="JerseyGems Trading Cards Logo">
+        </div>
+
+        <!-- Lafayette Recreation Center Experience -->
+        <div class="experience">
+          <div>
+            <h2>Lafayette College Recreation Center - Associate Supervisor</h2>
+            <p>September 2021 - May 2024</p>
+            <p>As an Associate Supervisor at the Kirby Recreation Center at Lafayette College, I managed 
+               and oversaw 50+ employees, including training them in CPR and First Aid. I also handled 
+               payroll scheduling, recruitment, and ensuring smooth operations at the facility.</p>
+            <!-- Link to company website -->
+            <a href="https://recreation.lafayette.edu/" target="_blank">Visit Lafayette Recreation Center</a>
+          </div>
+          <img src="lafayettelogo.png" alt="Lafayette Recreation Center Logo">
+        </div>
+
+        <!-- Additional Information Slide -->
+        <div class="experience">
+          <div>
+            <h2>Additional Information</h2>
+            <p>I am currently a CFA Level 1 candidate, awaiting the results of my October 2024 exam. In addition, I have taken courses such as Wall Street Prep’s LBO Bootcamp and Bloomberg Market Concepts, which have expanded my understanding of financial markets and technical modeling.</p>
+            <p>Beyond my professional pursuits, I have a strong passion for sports and fitness. I’m an avid distance runner, skier, and golfer, and I also enjoy coding in Java and collecting trading cards. My love for learning and improving keeps me engaged both in and outside of my career.</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const totalSlides = document.querySelectorAll('.experience').length;
+    let currentSlide = 0;
+
+    function moveCarousel(direction) {
+      currentSlide += direction;
+
+      // Wrap around logic for carousel
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+      }
+
+      const moveAmount = currentSlide * -100; // Move by 100% width per experience
+      track.style.transform = `translateX(${moveAmount}%)`;
+    }
+  </script>
+
+</body>
+</html>
