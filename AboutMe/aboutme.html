@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .about-text {
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      line-height: 1.6;
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-track img {
+      width: 30%;
+      height: auto;
+      margin: 0 10px;
+      border-radius: 8px;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 10px; /* Make sure it's inside the container */
+    }
+
+    .next {
+      right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>About Me</h1>
+
+    <div class="about-text">
+      <p>Hi! My name is Niko Orecchio, and I’m a recent graduate of Lafayette College with a degree in Economics, concentrating in Finance, and a minor in Data Science. I grew up in Old Tappan, NJ, and have always had a strong connection with my two brothers, with whom I share a love for sports and competition. Over the years, I developed a strong interest in finance, which has guided my academic and career path.</p>
+      <p>At Lafayette, I was involved in the investment club, where I gained exposure to financial analysis and market research. My coursework in economics, finance, and data science helped me build a solid foundation in both theory and application. I also worked as an Associate Supervisor at the campus gym, where I balanced work with my studies and extracurricular activities.</p>
+      <p>I’ve had the opportunity to complete internships in Private Equity and Financial Advising, where I learned about investment evaluation and client management. I’m also a CFA candidate and am currently awaiting my Level 1 results. To continue building my skills, I’ve taken additional courses like Wall Street Prep’s LBO Bootcamp and Bloomberg’s Market Concepts.</p>
+      <p>Outside of work and academics, I enjoy playing pickup sports as well as distance running, skiing, and golf. I also own and operate a trading card reselling business on eBay.</p>
+      <p>Feel free to browse through the site to learn more about my experiences and projects!</p>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+      <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+      <div class="carousel-track">
+        <img src="aboutme1.jpg" alt="About Me Photo 1">
+        <img src="aboutme2.jpg" alt="About Me Photo 2">
+        <img src="aboutme3.jpg" alt="About Me Photo 3">
+        <img src="aboutme4.jpg" alt="About Me Photo 4">
+        <img src="aboutme5.jpg" alt="About Me Photo 5">
+        <img src="aboutme6.jpg" alt="About Me Photo 6">
+        <img src="aboutme7.jpg" alt="About Me Photo 7">
+        <img src="aboutme8.jpg" alt="About Me Photo 8">
+      </div>
+      <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+
+  </div>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const totalSlides = document.querySelectorAll('.carousel-track img').length;
+    let currentSlide = 0;
+
+    function moveCarousel(direction) {
+      currentSlide += direction;
+
+      // Wrap around logic
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 3; // Wraps to the last 3
+      } else if (currentSlide > totalSlides - 3) {
+        currentSlide = 0; // Wraps back to the first 3
+      }
+
+      const moveAmount = currentSlide * -33.33; // 33.33% width to move one image
+      track.style.transform = `translateX(${moveAmount}%)`;
+    }
+  </script>
+
+</body>
+</html>
