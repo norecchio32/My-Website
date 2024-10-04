@@ -9,18 +9,25 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 50px;
+      background-color: #a2dee6; /* Soft light blue */
     }
     h1 {
       margin-bottom: 40px;
     }
+    /* Make the link-container a grid for 2x2 layout and center it */
     .link-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-gap: 20px; /* Space between icons */
+      justify-content: center; /* Center the entire grid */
+      justify-items: center; /* Center each individual item */
+      margin-bottom: 40px; /* Space between grid and resume button */
+      width: 100%; /* Ensure full width is used to allow centering */
+      max-width: 400px; /* Limit the width to control spacing */
+      margin-left: auto;
+      margin-right: auto; /* Center the grid horizontally */
     }
     .link {
-      display: inline-block;
-      margin: 20px;
       text-align: center;
       width: 200px;
     }
@@ -39,10 +46,23 @@
     .link a:hover {
       color: #45a049;
     }
+    /* Style for the download button */
+    .resume-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
   <h1>Welcome to Niko's Personal Website</h1>
+
+  <!-- 2x2 grid of icons -->
   <div class="link-container">
     
     <div class="link">
@@ -66,5 +86,9 @@
     </div>
     
   </div>
+
+  <!-- Resume download button -->
+  <a href="Experiences/resume.pdf" class="resume-link" download="Niko_Orecchio_Resume.pdf">Download My Resume</a>
+
 </body>
 </html>
