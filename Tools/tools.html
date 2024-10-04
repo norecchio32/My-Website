@@ -29,21 +29,28 @@
       margin: 20px;
       text-align: center;
       width: 150px;
-    }
-    .tool-link img {
-      width: 100px;
-      height: 100px;
-      border-radius: 10px;
+      vertical-align: top; /* Ensures vertical alignment */
     }
     .tool-link a {
       display: block;
-      margin-top: 10px;
       text-decoration: none;
       font-size: 18px;
       color: #000000;
     }
     .tool-link a:hover {
       color: #45a049;
+    }
+    .tool-link img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      transition: transform 0.2s; /* Enables the zoom effect on hover */
+      object-fit: cover; /* Ensures image scales properly without distortion */
+      display: block;
+      margin: 0 auto; /* Centers the image within its container */
+    }
+    .tool-link a img:hover {
+      transform: scale(1.1); /* Zoom effect on hover */
     }
   </style>
 </head>
@@ -58,23 +65,31 @@
   <div class="tool-container">
     
     <div class="tool-link">
-      <img src="LoanAmortizationCalc/calculatorlogo.png" alt="Loan Calc Logo">
-      <a href="LoanAmortizationCalc/index.html">Loan Amortization Calculator</a>
+      <a href="LoanAmortizationCalc/index.html">
+        <img src="LoanAmortizationCalc/calculatorlogo.png" alt="Loan Calc Logo">
+        Loan Amortization Calculator
+      </a>
     </div>
     
     <div class="tool-link">
-      <img src="MonteCarloSimulator/montecarlologo.png" alt="Monte Carlo Logo">
-      <a href="MonteCarloSimulator/index.html">Monte Carlo Simulator</a>
+      <a href="MonteCarloSimulator/index.html">
+        <img src="MonteCarloSimulator/montecarlologo.png" alt="Monte Carlo Logo">
+        Monte Carlo Simulator
+      </a>
     </div>
 
     <div class="tool-link">
+      <a href="TVMCalc/index.html">
         <img src="TVMCalc/tvmcalclogo.png" alt="TVM Calc Logo">
-        <a href="TVMCalc/index.html">Time Value of Money Calculator</a>
+        Time Value of Money Calculator
+      </a>
     </div>
 
     <div class="tool-link">
+      <a href="WorkoutCalc/index.html">
         <img src="WorkoutCalc/workoutlogo.png" alt="Workout Logo">
-        <a href="WorkoutCalc/index.html">Workout Calculator</a>
+        Workout Calculator
+      </a>
     </div>
 
   </div>

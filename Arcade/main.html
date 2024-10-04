@@ -29,21 +29,28 @@
       margin: 20px;
       text-align: center;
       width: 150px;
-    }
-    .game-link img {
-      width: 100px;
-      height: 100px;
-      border-radius: 10px;
+      vertical-align: top; /* Ensures all the game links are vertically aligned */
     }
     .game-link a {
       display: block;
-      margin-top: 10px;
       text-decoration: none;
       font-size: 18px;
       color: #000000;
     }
     .game-link a:hover {
       color: #45a049;
+    }
+    .game-link img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      transition: transform 0.2s; /* Enables the zoom effect on hover */
+      object-fit: cover; /* Ensures image scales properly without distortion */
+      display: block;
+      margin: 0 auto; /* Centers the image within its container */
+    }
+    .game-link a img:hover {
+      transform: scale(1.1); /* Zoom effect on hover */
     }
   </style>
 </head>
@@ -54,58 +61,80 @@
   <p class="intro-text">Here are some games, classic and new, that I have created using Java. 
     I am a self-taught coder and used only online tools and references for assistance.</p>
   <p>(Not supported on mobile)</p>
+  
   <div class="game-container">
     
     <div class="game-link">
-      <img src="BlackJack/assets/blackjacklogo1.png" alt="BlackJack Logo">
-      <a href="BlackJack/index.html">BlackJack</a>
+      <a href="BlackJack/index.html">
+        <img src="BlackJack/assets/blackjacklogo1.png" alt="BlackJack Logo">
+        BlackJack
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="Rocket/assets/rocketlogo1.png" alt="Rocket Logo">
-      <a href="Rocket/index.html">Rocket</a>
+      <a href="Rocket/index.html">
+        <img src="Rocket/assets/rocketlogo1.png" alt="Rocket Logo">
+        Rocket
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="Racecars/assets/racecarslogo1.png" alt="Racecars Logo">
-      <a href="Racecars/index.html">Racecars</a>
+      <a href="Racecars/index.html">
+        <img src="Racecars/assets/racecarslogo1.png" alt="Racecars Logo">
+        Racecars
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="2048/assets/2048logo1.png" alt="2048 Logo">
-      <a href="2048/index.html">2048</a>
+      <a href="2048/index.html">
+        <img src="2048/assets/2048logo1.png" alt="2048 Logo">
+        2048
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="Roulette/assets/roulettelogo1.png" alt="Roulette Logo">
-      <a href="Roulette/index.html">Roulette</a>
+      <a href="Roulette/index.html">
+        <img src="Roulette/assets/roulettelogo1.png" alt="Roulette Logo">
+        Roulette
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="ReachTheCore/assets/reachthecorelogo1.png" alt="Reach The Core Logo">
-      <a href="ReachTheCore/index.html">Reach The Core</a>
+      <a href="ReachTheCore/index.html">
+        <img src="ReachTheCore/assets/reachthecorelogo1.png" alt="Reach The Core Logo">
+        Reach The Core
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="Snake/assets/snakelogo1.png" alt="Snake Logo">
-      <a href="Snake/index.html">Snake</a>
+      <a href="Snake/index.html">
+        <img src="Snake/assets/snakelogo1.png" alt="Snake Logo">
+        Snake
+      </a>
     </div>
     
     <div class="game-link">
-      <img src="DoodleJump/assets/doodlejumplogo1.png" alt="Doodle Jump Logo">
-      <a href="DoodleJump/index.html">Doodle Jump</a>
+      <a href="DoodleJump/index.html">
+        <img src="DoodleJump/assets/doodlejumplogo1.png" alt="Doodle Jump Logo">
+        Doodle Jump
+      </a>
     </div>
 
     <div class="game-link">
-      <img src="Frogger/assets/froggerlogo1.png" alt="Frogger Logo">
-      <a href="Frogger/index.html">Frogger</a>
+      <a href="Frogger/index.html">
+        <img src="Frogger/assets/froggerlogo1.png" alt="Frogger Logo">
+        Frogger
+      </a>
     </div>
 
     <div class="game-link">
-      <img src="FlappyBird/assets/flappybirdlogo1.png" alt="Flappy Bird Logo">
-      <a href="FlappyBird/index.html">FlappyBird</a>
+      <a href="FlappyBird/index.html">
+        <img src="FlappyBird/assets/flappybirdlogo1.png" alt="Flappy Bird Logo">
+        FlappyBird
+      </a>
     </div>
 
   </div>
+  
 </body>
 </html>

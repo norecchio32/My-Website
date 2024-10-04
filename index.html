@@ -31,11 +31,6 @@
       text-align: center;
       width: 200px;
     }
-    .link img {
-      width: 150px;
-      height: 150px;
-      border-radius: 10px;
-    }
     .link a {
       display: block;
       margin-top: 10px;
@@ -45,6 +40,15 @@
     }
     .link a:hover {
       color: #45a049;
+    }
+    .link img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      transition: transform 0.2s; /* Optional: Adds a slight zoom on hover */
+    }
+    .link a img:hover {
+      transform: scale(1.05); /* Optional: Zoom effect when hovering over image */
     }
     /* Style for the download button */
     .resume-link {
@@ -66,23 +70,31 @@
   <div class="link-container">
     
     <div class="link">
-      <img src="AboutMe/aboutmelogo.png" alt="AboutMe Logo">
-      <a href="AboutMe/aboutme.html">About</a>
+      <a href="AboutMe/aboutme.html">
+        <img src="AboutMe/aboutmelogo.png" alt="AboutMe Logo">
+        About
+      </a>
     </div>
 
     <div class="link">
-      <img src="Experiences/experienceslogo.png" alt="Experiences Logo">
-      <a href="Experiences/experiences.html">Experiences</a>
+      <a href="Experiences/experiences.html">
+        <img src="Experiences/experienceslogo.png" alt="Experiences Logo">
+        Experiences
+      </a>
     </div>
 
     <div class="link">
-      <img src="Tools/toolslogo.png" alt="Tools Logo">
-      <a href="Tools/tools.html">Tools</a>
+      <a href="Tools/tools.html">
+        <img src="Tools/toolslogo.png" alt="Tools Logo">
+        Tools
+      </a>
     </div>
 
     <div class="link">
-      <img src="Arcade/arcadelogo.png" alt="Arcade Logo">
-      <a href="Arcade/main.html">Arcade</a>
+      <a href="Arcade/main.html">
+        <img src="Arcade/arcadelogo.png" alt="Arcade Logo">
+        Arcade
+      </a>
     </div>
     
   </div>
